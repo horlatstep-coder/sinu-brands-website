@@ -3,45 +3,311 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="google-site-verification" content="mS8G7PHSlHm8vWQaCMB8RkTwoZndTq3Wdl60yh5YKaY">
-<title>SÍNÚ BRANDS | Premium Perfume & Laundry Services in Nigeria</title>
-<meta name="description" content="Discover SÍNÚ PARFUM, premium fragrances available across Nigeria, and SÍNÚ LAUNDRY SERVICES in Olorunsogo, Ibadan.">
+
+<title>SÍNÚ BRANDS | Parfum & Laundry Services</title>
+<meta name="description" content="Discover SÍNÚ PARFUM, premium fragrances delivered across Nigeria, and SÍNÚ LAUNDRY SERVICES in Olorunsogo, Ibadan.">
+<meta name="theme-color" content="#101010">
+
 <style>
-body{margin:0;background:#101010;color:white;font-family:Arial,sans-serif;text-align:center}
-header{padding:55px 20px;background:#080808;border-bottom:2px solid #c9a34a}
-h1,h2{color:#d5b15c}
-h1{font-size:38px;letter-spacing:4px}
-section{padding:45px 20px;border-bottom:1px solid #333}
-p{line-height:1.8;color:#ddd}
-a{display:inline-block;background:#c9a34a;color:#111;padding:13px 22px;margin:10px;text-decoration:none;border-radius:4px;font-weight:bold}
-footer{padding:25px;color:#aaa;font-size:13px}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #101010;
+  color: #f7f4ed;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  border-bottom: 1px solid #393124;
+  background: #101010;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #d6b66b;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #eee;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.hero {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 75px 20px;
+  background: radial-gradient(circle, #302719 0%, #101010 70%);
+}
+
+.eyebrow {
+  color: #d6b66b;
+  letter-spacing: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  letter-spacing: 6px;
+  margin: 15px 0;
+}
+
+.gold { color: #d6b66b; }
+
+.hero p {
+  color: #c9c4b9;
+  max-width: 570px;
+  margin-bottom: 25px;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 24px;
+  background: #d6b66b;
+  color: #17130b;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 8px 5px;
+}
+
+.button.outline {
+  background: transparent;
+  border: 1px solid #d6b66b;
+  color: #d6b66b;
+}
+
+section {
+  padding: 75px 8%;
+  text-align: center;
+  border-bottom: 1px solid #302b22;
+}
+
+.section-label {
+  color: #d6b66b;
+  letter-spacing: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 12px 0 18px;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  color: #c7c2b8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  max-width: 950px;
+  margin: 35px auto;
+}
+
+.card {
+  background: #191919;
+  border: 1px solid #4a3d27;
+  padding: 35px 22px;
+  border-radius: 5px;
+}
+
+.card h3 {
+  color: #d6b66b;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #c7c2b8;
+  font-size: 14px;
+}
+
+.price {
+  color: #d6b66b !important;
+  font-size: 19px !important;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.tagline {
+  color: #d6b66b;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.contact {
+  background: #17140f;
+}
+
+.contact p {
+  color: #d0cbc1;
+  margin: 8px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer strong { color: #d6b66b; }
+
+@media(max-width:600px) {
+  nav {
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a { margin: 0 8px; }
+
+  section { padding: 55px 6%; }
+
+  .hero { min-height: 390px; }
+}
 </style>
 </head>
+
 <body>
-<header>
-<h1>SÍNÚ BRANDS</h1>
-<p>Luxury. Quality. Excellence.</p>
+
+<nav>
+  <div class="logo">SÍNÚ BRANDS</div>
+  <div>
+    <a href="#parfum">Parfum</a>
+    <a href="#laundry">Laundry</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Welcome to our world</div>
+  <h1>SÍNÚ <span class="gold">BRANDS</span></h1>
+  <p>Two businesses. One commitment to quality, excellence and customer satisfaction.</p>
+  <a class="button" href="#parfum">Explore Our Brands</a>
 </header>
-<section>
-<h2>SÍNÚ PARFUM</h2>
-<p>Meet your new signature scent. Discover premium fragrances made to leave a lasting impression.</p>
-<p>100ml – ₦30,999</p>
-<p>50ml – ₦14,999</p>
-<p>Delivery available across Nigeria. Delivery charges are separate.</p>
-<a href="https://wa.me/2348136359354">Order on WhatsApp</a>
-<a href="https://www.tiktok.com/@sinuparfum">Follow SÍNÚ PARFUM</a>
+
+<section id="parfum">
+  <div class="section-label">The fragrance experience</div>
+  <h2>SÍNÚ <span class="gold">PARFUM</span></h2>
+  <p class="intro">
+    Meet your new signature scent. Discover premium fragrances
+    created to leave a memorable impression wherever you go.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>100ml</h3>
+      <p>Experience your signature fragrance in a generous size.</p>
+      <p class="price">₦30,999</p>
+    </div>
+
+    <div class="card">
+      <h3>50ml</h3>
+      <p>Your favourite fragrance in a convenient size.</p>
+      <p class="price">₦14,999</p>
+    </div>
+  </div>
+
+  <p class="intro">Available for delivery across Nigeria.</p>
+
+  <a class="button" href="https://wa.me/2348136359354">
+    Order on WhatsApp
+  </a>
+
+  <a class="button outline" href="https://www.tiktok.com/@sinuparfum">
+    Follow SÍNÚ PARFUM
+  </a>
 </section>
-<section>
-<h2>SÍNÚ LAUNDRY SERVICES</h2>
-<p>Fresh CLOTHES, Happy YOU</p>
-<p>Professional laundry and garment care in Olorunsogo, Ibadan.</p>
-<p>Address: Oluyedun Street, Olorunsogo, Ibadan.</p>
-<a href="https://wa.me/2348136359354">Contact / Book Laundry</a>
-<a href="https://www.tiktok.com/@sinu.laundry.serv">Follow Our Laundry</a>
+
+<section id="laundry">
+  <div class="section-label">Professional garment care</div>
+  <h2>SÍNÚ <span class="gold">LAUNDRY SERVICES</span></h2>
+
+  <p class="tagline">Fresh CLOTHES, Happy YOU</p>
+
+  <p class="intro">
+    We give your clothes the care and attention they deserve.
+    Enjoy professional laundry services with a commitment
+    to cleanliness, freshness and excellent finishing.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Washing</h3>
+      <p>Professional washing and garment care.</p>
+    </div>
+
+    <div class="card">
+      <h3>Ironing</h3>
+      <p>Neatly finished clothes, ready to wear.</p>
+    </div>
+
+    <div class="card">
+      <h3>Customer Care</h3>
+      <p>Reliable service with attention to every order.</p>
+    </div>
+  </div>
+
+  <p class="intro">
+    Visit us at Oluyedun Street, Olorunsogo, Ibadan.
+  </p>
+
+  <a class="button" href="https://wa.me/2348136359354">
+    Contact Our Laundry
+  </a>
+
+  <a class="button outline" href="https://www.tiktok.com/@sinu.laundry.serv">
+    Follow Our Laundry
+  </a>
 </section>
+
+<section class="contact" id="contact">
+  <div class="section-label">Let's connect</div>
+  <h2>Get in <span class="gold">Touch</span></h2>
+
+  <p><strong>Phone:</strong> 08136359354</p>
+  <p><strong>Email:</strong> Horlatstep@gmail.com</p>
+  <p><strong>Location:</strong> Olorunsogo, Ibadan, Nigeria</p>
+
+  <a class="button" href="https://wa.me/2348136359354">
+    Chat With Us
+  </a>
+</section>
+
 <footer>
-<p>© 2026 SÍNÚ BRANDS. All rights reserved.</p>
-<p>Phone: 08136359354 | Email: Horlatstep@gmail.com</p>
+  <p><strong>SÍNÚ BRANDS</strong></p>
+  <p>Luxury. Quality. Excellence.</p>
+  <p>© 2026 SÍNÚ BRANDS. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
