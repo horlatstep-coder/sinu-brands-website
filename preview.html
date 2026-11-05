@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SÍNÚ BRANDS | Luxury & Lifestyle</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#090909;color:#f8f5ed;font-family:Arial,sans-serif;line-height:1.6}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #a98542;position:sticky;top:0;background:#090909;z-index:5}
+.logo{color:#d4b16b;font-size:25px;font-weight:bold;letter-spacing:4px}
+nav a{color:#eee;text-decoration:none;margin-left:18px;font-size:13px}
+.gold{color:#d4b16b}
+.hero{text-align:center;padding:65px 20px 45px;background:linear-gradient(140deg,#17130c,#080808)}
+.hero h1{font-size:38px;letter-spacing:5px;color:#d8b56c}
+.hero p{color:#ccc;margin-top:12px}
+.section{padding:55px 6%;text-align:center}
+.section h2{font-size:27px;color:#d8b56c;letter-spacing:3px;margin-bottom:10px}
+.sub{color:#aaa;margin-bottom:32px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px;max-width:800px;margin:auto}
+.product{background:#151515;border:1px solid #70572e;border-radius:12px;padding:22px}
+.bottle-stage{height:245px;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse,#302719,#101010 68%);border-radius:9px;margin-bottom:20px}
+.bottle{width:105px;height:175px;border:2px solid #c5a15c;border-radius:13px 13px 19px 19px;background:linear-gradient(90deg,#17120c,#b18a43 35%,#21190e 75%);position:relative;box-shadow:0 12px 30px #000}
+.bottle:before{content:"";position:absolute;width:38px;height:24px;background:#c6a25d;top:-27px;left:31px;border-radius:4px 4px 0 0}
+.bottle:after{content:"SÍNÚ";position:absolute;top:75px;left:0;width:100%;text-align:center;color:#f5d99b;font-size:18px;letter-spacing:2px;font-weight:bold}
+.bottle.small{transform:scale(.83)}
+.product h3{color:#f4d89b;font-size:19px}
+.price{font-size:22px;color:#d8b56c;font-weight:bold;margin:8px}
+.product button,.checkout{background:#c6a15c;color:#111;border:0;padding:13px 20px;border-radius:5px;font-weight:bold;width:100%;margin-top:12px}
+.cartbar{position:fixed;right:15px;bottom:18px;z-index:10;background:#d4b16b;color:#111;border-radius:30px;padding:13px 20px;font-weight:bold;box-shadow:0 4px 20px #000}
+#cart{display:none;position:fixed;inset:0;background:#000b;z-index:20;align-items:center;justify-content:center;padding:18px}
+.cartbox{background:#171717;border:1px solid #c6a15c;padding:25px;border-radius:12px;width:100%;max-width:420px;max-height:85vh;overflow:auto}
+.cartbox h2{color:#d8b56c;margin-bottom:15px}
+.cartline{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #444}
+.cartline button{background:none;color:#d8b56c;border:0;font-size:18px}
+.total{padding:18px 0;font-size:20px;color:#d8b56c}
+.close{background:#444;color:white;border:0;padding:10px 15px;border-radius:5px;margin-top:10px}
+.laundry{background:#151515;border-top:1px solid #725a32;border-bottom:1px solid #725a32}
+.contact{padding:45px 20px;text-align:center}
+.contact a{color:#d8b56c}
+footer{text-align:center;padding:22px;color:#888;border-top:1px solid #333;font-size:13px}
+@media(max-width:550px){header{padding:15px 4%;flex-wrap:wrap;gap:12px}nav a{margin-left:10px;font-size:12px}.hero h1{font-size:29px}.section{padding:42px 5%}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">SÍNÚ</div>
+<nav>
+<a href="#parfum">PARFUM</a>
+<a href="#laundry">LAUNDRY</a>
+<a href="#contact">CONTACT</a>
+</nav>
+</header>
+
+<section class="hero">
+<p class="gold">THE SÍNÚ EXPERIENCE</p>
+<h1>TIMELESS ELEGANCE</h1>
+<p>Discover the signature of luxury. Experience SÍNÚ.</p>
+</section>
+
+<section class="section" id="parfum">
+<h2>SÍNÚ PARFUM</h2>
+<p class="sub">Meet your new signature scent.</p>
+<div class="products">
+<div class="product">
+<div class="bottle-stage"><div class="bottle"></div></div>
+<h3>SÍNÚ Eau de Parfum</h3>
+<p>100ml · Full Size</p>
+<div class="price">₦30,999</div>
+<button onclick="add(100)">ADD TO BAG</button>
+</div>
+<div class="product">
+<div class="bottle-stage"><div class="bottle small"></div></div>
+<h3>SÍNÚ Eau de Parfum</h3>
+<p>50ml · Signature Size</p>
+<div class="price">₦14,999</div>
+<button onclick="add(50)">ADD TO BAG</button>
+</div>
+</div>
+<p class="sub" style="margin-top:25px">Nationwide delivery available. Delivery charges apply.</p>
+</section>
+
+<section class="section laundry" id="laundry">
+<h2>SÍNÚ LAUNDRY SERVICES</h2>
+<p class="sub">Fresh CLOTHES, Happy YOU.</p>
+<p>Professional washing, drying, ironing and garment care in Ibadan.</p>
+<p style="margin-top:12px">Oluyedun Street, Olorunsogo, Ibadan</p>
+</section>
+
+<section class="contact" id="contact">
+<h2 class="gold">CONTACT SÍNÚ</h2>
+<p>WhatsApp: <a href="https://wa.me/2348136359354">0813 635 9354</a></p>
+<p>TikTok: @sinuparfum</p>
+</section>
+
+<footer>© 2026 SÍNÚ BRANDS. All rights reserved.</footer>
+
+<button class="cartbar" onclick="showCart()">BAG (<span id="count">0</span>)</button>
+
+<div id="cart">
+<div class="cartbox">
+<h2>YOUR SHOPPING BAG</h2>
+<div id="items">Your bag is empty.</div>
+<div class="total">Total: ₦<span id="total">0</span></div>
+<button class="checkout" onclick="checkout()">ORDER VIA WHATSAPP</button>
+<button class="close" onclick="hideCart()">CONTINUE SHOPPING</button>
+</div>
+</div>
+
+<script>
+const bag = {100:0,50:0};
+const prices = {100:30999,50:14999};
+
+function add(size){
+bag[size]++;
+update();
+showCart();
+}
+
+function update(){
+let count=bag[100]+bag[50];
+let total=bag[100]*prices[100]+bag[50]*prices[50];
+document.getElementById("count").textContent=count;
+document.getElementById("total").textContent=total.toLocaleString("en-NG");
+let html="";
+[100,50].forEach(size=>{
+if(bag[size]>0){
+html+=`<div class="cartline">
+<span>${size}ml SÍNÚ PARFUM × ${bag[size]}</span>
+<span>₦${(prices[size]*bag[size]).toLocaleString("en-NG")}
+<button onclick="change(${size},-1)">−</button>
+<button onclick="change(${size},1)">+</button></span>
+</div>`;
+}
+});
+document.getElementById("items").innerHTML=html||"Your bag is empty.";
+}
+
+function change(size,amount){
+bag[size]=Math.max(0,bag[size]+amount);
+update();
+}
+
+function showCart(){
+document.getElementById("cart").style.display="flex";
+}
+function hideCart(){
+document.getElementById("cart").style.display="none";
+}
+
+function checkout(){
+let lines=[];
+[100,50].forEach(size=>{
+if(bag[size]>0){
+lines.push(size+"ml SÍNÚ PARFUM x "+bag[size]+" = ₦"+(prices[size]*bag[size]).toLocaleString("en-NG"));
+}
+});
+if(!lines.length){alert("Your bag is empty.");return;}
+let total=bag[100]*prices[100]+bag[50]*prices[50];
+let message="Hello SÍNÚ PARFUM, I would like to order:\n"+lines.join("\n")+"\nTotal: ₦"+total.toLocaleString("en-NG")+"\nPlease confirm delivery charges.";
+window.open("https://wa.me/2348136359354?text="+encodeURIComponent(message),"_blank");
+}
+</script>
+</body>
+</html>
